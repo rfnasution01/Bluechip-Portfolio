@@ -1,111 +1,114 @@
-import { CONTACT_DATA } from "@/data/contact";
-import { HERO_DATA } from "@/data/hero";
-import { motion } from "framer-motion";
-import { FaWhatsapp, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { CONTACT_DATA } from "../../data/contact";
 
-export function ContactSection() {
-	const data = CONTACT_DATA;
+export const ContactSection = () => {
+	const { email, linkedIn, linkedInDisplay, resumeUrl, availabilityStatus } =
+		CONTACT_DATA;
 
 	return (
-		<section className="relative flex flex-col gap-10 pt-16 pb-10 border-t border-white/10 overflow-hidden">
-			{/* BACKGROUND GLOW */}
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 0.08 }}
-				transition={{ duration: 1 }}
-				className="absolute left-1/2 bottom-0 -translate-x-1/2 w-[600px] h-[600px] bg-primary blur-[140px]"
-			/>
+		<section className="w-full py-24 px-8 md:px-24 bg-white border-t border-slate-200">
+			<div className="max-w-7xl mx-auto">
+				<div className="grid lg:grid-cols-2 gap-16 items-center">
+					{/* LEFT: Branding */}
+					<div className="space-y-6">
+						<p className="display-cap text-blue-900">Communication Gateway</p>
+						<h2 className="h1 text-slate-900 leading-tight">
+							Initiate a Strategic Partnership.
+						</h2>
+						<p className="text-slate-500 max-w-md font-light leading-relaxed">
+							Currently open for Management Trainee roles, Financial Analyst
+							positions, and Strategic Consultations.
+						</p>
 
-			{/* ================= CTA ================= */}
-			<motion.div
-				initial={{ opacity: 0, y: 40 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true }}
-				transition={{ duration: 0.7 }}
-				className="flex flex-col items-center text-center gap-4"
-			>
-				<h3 className="text-white text-xl md:text-2xl font-semibold">
-					Let’s Build Something Great Together
-				</h3>
+						{/* Dynamic Availability Status */}
+						<div className="pt-4 flex items-center gap-4 text-xs font-mono text-slate-400">
+							<span
+								className={`flex h-2 w-2 rounded-full ${availabilityStatus ? "bg-green-500 animate-pulse" : "bg-red-500"}`}
+							/>
+							{availabilityStatus
+								? "ACTIVE & OPEN TO OPPORTUNITIES"
+								: "CURRENTLY ENGAGED"}
+						</div>
+					</div>
 
-				<p className="text-gray-400 max-w-md">
-					Open for freelance, collaboration, or just a friendly chat.
-				</p>
-			</motion.div>
-
-			{/* ================= SOCIAL ================= */}
-			<motion.div
-				initial="hidden"
-				whileInView="show"
-				viewport={{ once: true }}
-				variants={{
-					hidden: {},
-					show: {
-						transition: {
-							staggerChildren: 0.15,
-						},
-					},
-				}}
-				className="flex justify-center gap-6"
-			>
-				{[
-					{
-						href: `https://api.whatsapp.com/send?phone=${data.whatsapp}`,
-						icon: FaWhatsapp,
-						label: "WhatsApp",
-					},
-					{
-						href: data.linkedin,
-						icon: FaLinkedin,
-						label: "LinkedIn",
-					},
-					{
-						href: `mailto:${data.email}`,
-						icon: FaEnvelope,
-						label: "Email",
-					},
-				].map((item, i) => {
-					const Icon = item.icon;
-
-					return (
-						<motion.a
-							key={i}
-							href={item.href}
-							target="_blank"
-							initial={{ opacity: 0, y: 30 }}
-							animate={{ opacity: 1, y: 0 }}
-							whileHover={{ scale: 1.15, y: -4 }}
-							transition={{ duration: 0.3 }}
-							className="group relative flex flex-col items-center gap-2"
+					{/* RIGHT: Contact Methods */}
+					<div className="grid gap-4">
+						<a
+							href={`mailto:${email}`}
+							className="group p-8 border border-slate-200 flex justify-between items-center hover:bg-slate-900 hover:border-slate-900 transition-all duration-500"
 						>
-							{/* ICON */}
-							<div className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-xl transition group-hover:border-primary group-hover:shadow-[0_0_20px_rgba(153,255,6,0.4)]">
-								<Icon className="text-lg text-gray-300 group-hover:text-primary transition" />
+							<div>
+								<p className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-blue-400 transition-colors">
+									Official Email
+								</p>
+								<p className="text-lg font-serif font-bold text-slate-900 group-hover:text-white transition-colors">
+									{email}
+								</p>
 							</div>
+							<div className="text-slate-300 group-hover:text-white transition-transform group-hover:translate-x-2">
+								→
+							</div>
+						</a>
 
-							{/* LABEL */}
-							<span className="text-xs text-gray-400 group-hover:text-white transition">
-								{item.label}
-							</span>
+						<a
+							href={linkedIn}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group p-8 border border-slate-200 flex justify-between items-center hover:bg-slate-900 hover:border-slate-900 transition-all duration-500"
+						>
+							<div>
+								<p className="text-[10px] uppercase font-bold text-slate-400 group-hover:text-blue-400 transition-colors">
+									Professional Network
+								</p>
+								<p className="text-lg font-serif font-bold text-slate-900 group-hover:text-white transition-colors">
+									{linkedInDisplay}
+								</p>
+							</div>
+							<div className="text-slate-300 group-hover:text-white transition-transform group-hover:translate-x-2">
+								→
+							</div>
+						</a>
 
-							{/* glow */}
-							<div className="absolute inset-0 opacity-0 group-hover:opacity-100 blur-xl bg-primary/20 transition"></div>
-						</motion.a>
-					);
-				})}
-			</motion.div>
+						<div className="pt-4 grid grid-cols-2 gap-4">
+							<a
+								href={resumeUrl}
+								download
+								className="btn-executive text-center flex justify-center items-center gap-2 no-underline"
+							>
+								<svg
+									width="14"
+									height="14"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									strokeWidth="2.5"
+								>
+									<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+								</svg>
+								Download Brief
+							</a>
+							<button
+								onClick={() => (window.location.href = `mailto:${email}`)}
+								className="btn-outline-executive"
+							>
+								Schedule Call
+							</button>
+						</div>
+					</div>
+				</div>
 
-			{/* ================= FOOTER ================= */}
-			<motion.div
-				initial={{ opacity: 0 }}
-				whileInView={{ opacity: 1 }}
-				viewport={{ once: true }}
-				transition={{ delay: 0.3 }}
-				className="text-center text-gray-500 text-xs mt-6"
-			>
-				© {new Date().getFullYear()} {HERO_DATA?.headlines?.[0]}. All rights
-				reserved.
-			</motion.div>
+				{/* Footer */}
+				<div className="mt-32 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 font-mono text-[10px] tracking-widest">
+					<p>© {new Date().getFullYear()} ALL RIGHTS RESERVED.</p>
+					<div className="flex gap-8 uppercase font-bold tracking-[0.2em]">
+						<span className="hover:text-blue-900 cursor-pointer transition-colors">
+							Privacy Policy
+						</span>
+						<span className="hover:text-blue-900 cursor-pointer transition-colors">
+							Terms of Briefing
+						</span>
+					</div>
+				</div>
+			</div>
 		</section>
 	);
-}
+};

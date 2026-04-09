@@ -1,42 +1,47 @@
-import type { IconType } from "react-icons";
-import { FaBuilding, FaLandmark, FaMountain, FaHardHat } from "react-icons/fa";
-
-export type ExperienceData = {
-	role: string;
+export type ExperienceItem = {
 	company: string;
+	role: string;
 	period: string;
-	icon: IconType;
+	location?: string;
+	details: {
+		situation: string;
+		task: string;
+		action: string;
+		results: string[];
+	};
 };
 
-export const EXPERIENCE_DATA: ExperienceData[] = [
+export const EXPERIENCE_DATA: ExperienceItem[] = [
 	{
-		role: "Senior Mine Planner",
-		company: "PT Bukit Asam Tbk",
-		period: "Apr 2024 - Present",
-		icon: FaMountain,
+		company: "PwC Indonesia",
+		role: "Audit Intern",
+		period: "Jan 2025 - Mar 2025",
+		location: "Jakarta, Indonesia",
+		details: {
+			situation:
+				"Handled financial audit processes for mid-sized corporate clients.",
+			task: "Assist senior auditors in preparing financial statements and compliance reports.",
+			action:
+				"Analyzed financial data, validated transactions, and collaborated with cross-functional teams.",
+			results: [
+				"Improved audit efficiency by 20%",
+				"Validated transactions worth Rp 1.2B",
+			],
+		},
 	},
 	{
-		role: "Mining Engineer",
-		company: "PT Adaro Energy Indonesia",
-		period: "Aug 2023 - Jun 2024",
-		icon: FaBuilding,
-	},
-	{
-		role: "Operations Supervisor",
-		company: "PT Kaltim Prima Coal",
-		period: "Apr 2023 - Jul 2023",
-		icon: FaHardHat,
-	},
-	{
-		role: "Surveyor Engineer",
-		company: "PT United Tractors Tbk",
-		period: "Dec 2022 - Mar 2023",
-		icon: FaLandmark,
-	},
-	{
-		role: "Junior Geologist",
-		company: "PT Antam Tbk",
-		period: "Oct 2022 - Dec 2022",
-		icon: FaBuilding,
+		company: "ABC Consulting",
+		role: "Business Analyst Intern",
+		period: "Aug 2024 - Dec 2024",
+		location: "Remote",
+		details: {
+			situation: "Client faced declining revenue in retail segment.",
+			task: "Identify root cause and propose data-driven strategy.",
+			action: "Conducted market analysis and built financial projection model.",
+			results: [
+				"Increased projected revenue by 15%",
+				"Reduced operational cost by 10%",
+			],
+		},
 	},
 ];

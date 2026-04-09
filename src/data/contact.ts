@@ -1,12 +1,15 @@
-// contact.ts
 export type ContactData = {
-	whatsapp: string;
-	linkedin: string;
 	email: string;
+	linkedIn: string;
+	linkedInDisplay: string;
+	resumeUrl: string;
+	availabilityStatus: boolean;
 };
 
 export const CONTACT_DATA: ContactData = {
-	whatsapp: "6281234567890",
-	linkedin: "https://linkedin.com",
-	email: "budi.santoso@mining-eng.com",
+	email: "ardiansyah.putra@email.com",
+	linkedIn: "https://linkedin.com",
+	linkedInDisplay: "://linkedin.com",
+	resumeUrl: "/resume-ardiansyah.pdf",
+	availabilityStatus: true,
 };

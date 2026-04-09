@@ -1,23 +1,26 @@
-import ProfileImage from "@/assets/img/profiles.jpg";
-
 export type HeroData = {
-	headlines: string[];
+	badge: string;
+	name: string;
 	title: string;
 	description: string;
-	image: string;
-	phone: string;
+	ctaPrimary: string;
+	ctaSecondary: string;
+	image?: string;
+	credentials: string[]; // Sertifikasi (CPA, CFA, dll)
+	keyMetrics: { label: string; value: string }[]; // Hasil terukur
 };
 
 export const HERO_DATA: HeroData = {
-	headlines: [
-		"Budi Santoso, S.T.",
-		"Mining Engineer",
-		"Mine Planner",
-		"Operations Supervisor",
+	badge: "Executive Opportunity: Management Trainee",
+	name: "Ardiansyah Putra, S.E.",
+	title: "Financial Auditor & Strategic Risk Consultant",
+	description:
+		"Specializing in Financial Assurance and Corporate Risk Advisory. Proven track record in streamlining audit workflows and delivering high-stakes financial insights for complex organizational structures.",
+	ctaPrimary: "Download Executive Brief",
+	ctaSecondary: "View Case Studies",
+	credentials: ["CPA Candidate", "Brevet A & B Certified", "SAP FI/CO"],
+	keyMetrics: [
+		{ label: "Audit Efficiency", value: "+25%" },
+		{ label: "Assets Managed", value: "IDR 1.2B+" },
 	],
-	title: "Driving Safe, Efficient, and Sustainable Mining Operations.",
-	description: `I specialize in optimizing open-pit layouts, managing fleet 
-productivity, and ensuring rigorous safety standards to maximize mineral recovery.`,
-	image: ProfileImage,
-	phone: "6281234567890",
 };
