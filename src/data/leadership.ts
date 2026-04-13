@@ -7,17 +7,17 @@ export type LeadershipItem = {
 
 export const LEADERSHIP_DATA: LeadershipItem[] = [
 	{
-		role: "Head of Finance Division",
-		organization: "Student Executive Board",
+		role: "Head of Finance",
+		organization: "Student Government Association",
 		period: "2024 - 2025",
 		impact:
-			"Managed organizational budget and improved financial reporting efficiency by 25%",
+			"Managed organizational budget and improved reporting efficiency by 25%",
 	},
 	{
-		role: "Project Leader",
-		organization: "National Business Case Competition",
+		role: "Team Leader",
+		organization: "International Business Case Competition",
 		period: "2023",
 		impact:
-			"Led a team of 5 members to reach Top 3 finalists among 100+ participants",
+			"Led a team of 5 to achieve Top 3 placement among 100+ participants",
 	},
 ];

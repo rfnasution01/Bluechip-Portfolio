@@ -8,18 +8,18 @@ export type EducationItem = {
 };
 
 export const EDUCATION_DATA: EducationItem = {
-	university: "University of Indonesia",
-	degree: "Bachelor of Economics",
+	university: "National University of Singapore",
+	degree: "Bachelor of Business Administration (Finance)",
 	period: "2021 - 2025",
 	gpa: "3.85 / 4.00",
 	achievements: [
-		"Awarded Academic Excellence Scholarship",
+		"Dean’s List for Academic Excellence",
 		"Top 5% of graduating class",
 	],
 	coursework: [
 		"Financial Accounting",
-		"Risk Management",
 		"Corporate Finance",
+		"Risk Management",
 		"Business Analytics",
 	],
 };

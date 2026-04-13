@@ -19,7 +19,10 @@ const fadeInUp: Variants = {
 
 export const CaseStudySection = () => {
 	return (
-		<section className="w-full py-24 px-8 md:px-24 bg-[#F8FAFC]">
+		<section
+			id="case-study"
+			className="w-full py-24 px-8 md:px-24 bg-[#F8FAFC]"
+		>
 			<div className="max-w-7xl mx-auto">
 				{/* Section Header: The Strategic Narrative */}
 				<div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">

@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { LEADERSHIP_DATA } from "../../data/leadership";
+import { CONTACT_DATA } from "@/data/contact";
 
 const fadeInUp: Variants = {
 	hidden: { opacity: 0, y: 20 },
@@ -80,7 +81,17 @@ export const LeadershipSection = () => {
 						I can apply rigorous financial methodology and leadership.
 					</p>
 					<div className="pt-4">
-						<button className="btn-executive bg-white text-slate-900 hover:bg-blue-50">
+						<button
+							onClick={() => {
+								const message = encodeURIComponent(
+									"Halo, saya tertarik dengan jasa pembuatan website portofolio. Bisa dijelaskan lebih lanjut?",
+								);
+
+								const url = `https://wa.me/${CONTACT_DATA.phone}?text=${message}`;
+								window.open(url, "_blank");
+							}}
+							className="btn-executive bg-white text-slate-900 hover:bg-blue-50"
+						>
 							Schedule Executive Briefing
 						</button>
 					</div>

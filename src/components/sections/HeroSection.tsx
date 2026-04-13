@@ -69,10 +69,20 @@ export const HeroSection = () => {
 
 					<motion.div variants={fadeInUp} className="flex flex-wrap gap-4 pt-4">
 						{/* Menggunakan class 'btn-executive' dari index.css Anda */}
-						<button className="btn-executive shadow-xl shadow-slate-200">
+						<a
+							href="/CV.pdf"
+							download
+							className="btn-executive shadow-xl shadow-slate-200 inline-block text-center"
+						>
 							{HERO_DATA.ctaPrimary}
-						</button>
-						<button className="btn-outline-executive">
+						</a>
+						<button
+							onClick={() => {
+								const el = document.getElementById("case-study");
+								el?.scrollIntoView({ behavior: "smooth" });
+							}}
+							className="btn-outline-executive"
+						>
 							{HERO_DATA.ctaSecondary}
 						</button>
 					</motion.div>

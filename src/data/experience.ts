@@ -13,34 +13,35 @@ export type ExperienceItem = {
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
 	{
-		company: "PwC Indonesia",
+		company: "Deloitte",
 		role: "Audit Intern",
 		period: "Jan 2025 - Mar 2025",
-		location: "Jakarta, Indonesia",
+		location: "Singapore",
 		details: {
 			situation:
-				"Handled financial audit processes for mid-sized corporate clients.",
-			task: "Assist senior auditors in preparing financial statements and compliance reports.",
+				"Supported audit engagements for mid-sized corporate clients across multiple industries.",
+			task: "Assist in financial reporting review and compliance assessment.",
 			action:
-				"Analyzed financial data, validated transactions, and collaborated with cross-functional teams.",
+				"Performed data validation, reconciliations, and collaborated with audit teams.",
 			results: [
 				"Improved audit efficiency by 20%",
-				"Validated transactions worth Rp 1.2B",
+				"Analyzed transactions exceeding $500K",
 			],
 		},
 	},
 	{
-		company: "ABC Consulting",
+		company: "Global Consulting Group",
 		role: "Business Analyst Intern",
 		period: "Aug 2024 - Dec 2024",
 		location: "Remote",
 		details: {
-			situation: "Client faced declining revenue in retail segment.",
-			task: "Identify root cause and propose data-driven strategy.",
-			action: "Conducted market analysis and built financial projection model.",
+			situation: "Client faced declining performance in retail operations.",
+			task: "Identify root causes and recommend strategic improvements.",
+			action:
+				"Conducted market analysis and built financial projection models.",
 			results: [
-				"Increased projected revenue by 15%",
-				"Reduced operational cost by 10%",
+				"Projected revenue growth of 15%",
+				"Reduced operational costs by 10%",
 			],
 		},
 	},

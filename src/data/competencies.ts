@@ -18,22 +18,22 @@ export const COMPETENCIES_DATA: CompetenciesData = {
 		{
 			title: "Audit & Compliance",
 			items: [
-				"Audit Frameworks",
+				"Audit Frameworks (IFRS/GAAP)",
 				"Financial Reporting",
-				"Internal Control",
+				"Internal Controls",
 				"Regulatory Compliance",
 			],
 		},
 		{
 			title: "Risk & Governance",
 			items: [
-				"Risk Assessment",
+				"Enterprise Risk Assessment",
 				"Corporate Governance",
 				"Risk Mitigation Strategy",
 			],
 		},
 		{
-			title: "Finance & Analysis",
+			title: "Finance & Analytics",
 			items: ["Financial Modeling", "Variance Analysis", "Budget Forecasting"],
 		},
 	],
@@ -43,8 +43,8 @@ export const COMPETENCIES_DATA: CompetenciesData = {
 			issuer: "AICPA",
 		},
 		{
-			name: "Brevet A & B Tax Certification",
-			issuer: "Ikatan Konsultan Pajak Indonesia",
+			name: "Financial Modeling & Valuation Analyst (FMVA)",
+			issuer: "CFI",
 		},
 	],
 };

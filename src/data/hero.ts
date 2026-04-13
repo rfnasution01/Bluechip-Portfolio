@@ -11,16 +11,20 @@ export type HeroData = {
 };
 
 export const HERO_DATA: HeroData = {
-	badge: "Executive Opportunity: Management Trainee",
-	name: "Ardiansyah Putra, S.E.",
-	title: "Financial Auditor & Strategic Risk Consultant",
+	badge: "Executive Candidate: Management Trainee Program",
+	name: "Alexander Carter",
+	title: "Financial Auditor & Risk Advisory Specialist",
 	description:
-		"Specializing in Financial Assurance and Corporate Risk Advisory. Proven track record in streamlining audit workflows and delivering high-stakes financial insights for complex organizational structures.",
-	ctaPrimary: "Download Executive Brief",
+		"Specializing in financial assurance and enterprise risk advisory. Proven ability to optimize audit processes and deliver actionable insights for complex business environments.",
+	ctaPrimary: "Download Resume",
 	ctaSecondary: "View Case Studies",
-	credentials: ["CPA Candidate", "Brevet A & B Certified", "SAP FI/CO"],
+	credentials: [
+		"CPA Candidate",
+		"Certified in Financial Modeling",
+		"SAP FI/CO",
+	],
 	keyMetrics: [
-		{ label: "Audit Efficiency", value: "+25%" },
-		{ label: "Assets Managed", value: "IDR 1.2B+" },
+		{ label: "Audit Efficiency Improvement", value: "+25%" },
+		{ label: "Transactions Analyzed", value: "$500K+" },
 	],
 };

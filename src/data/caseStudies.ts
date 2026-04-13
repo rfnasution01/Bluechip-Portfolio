@@ -8,27 +8,27 @@ export type CaseStudy = {
 
 export const CASE_STUDIES_DATA: CaseStudy[] = [
 	{
-		title: "Retail Revenue Decline Analysis",
+		title: "Retail Revenue Optimization Strategy",
 		role: "Business Analyst Intern",
 		problem:
-			"Client experienced a consistent 15% decline in revenue over two quarters in the retail segment.",
+			"A mid-sized retail company experienced a 15% revenue decline over two consecutive quarters.",
 		solution:
-			"Conducted market segmentation analysis and identified underperforming product lines. Proposed pricing optimization and targeted marketing strategy.",
+			"Conducted segmentation and profitability analysis to identify underperforming product lines. Recommended pricing adjustments and targeted campaigns.",
 		impact: [
-			"Increased projected revenue by 18%",
-			"Reduced customer churn by 12%",
+			"Projected revenue increase of 18%",
+			"Customer churn reduced by 12%",
 		],
 	},
 	{
-		title: "Financial Reporting Automation",
+		title: "Financial Reporting Process Automation",
 		role: "Audit Intern",
 		problem:
-			"Manual financial reporting process caused delays and increased risk of human error.",
+			"Manual reporting workflows caused delays and increased risk of errors.",
 		solution:
-			"Developed automated Excel-based reporting system using advanced formulas and structured templates.",
+			"Designed an automated reporting system using structured templates and advanced spreadsheet logic.",
 		impact: [
-			"Reduced reporting time by 30%",
-			"Improved data accuracy and consistency",
+			"Reporting time reduced by 30%",
+			"Improved data accuracy and audit reliability",
 		],
 	},
 ];
