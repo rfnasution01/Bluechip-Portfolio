@@ -1,8 +1,15 @@
 import { CONTACT_DATA } from "../../data/contact";
 
 export const ContactSection = () => {
-	const { email, linkedIn, linkedInDisplay, resumeUrl, availabilityStatus } =
-		CONTACT_DATA;
+	const {
+		email,
+		linkedIn,
+		linkedInDisplay,
+		resumeUrl,
+		availabilityStatus,
+		description,
+		label,
+	} = CONTACT_DATA;
 
 	return (
 		<section className="w-full py-24 px-8 md:px-24 bg-white border-t border-slate-200">
@@ -11,12 +18,9 @@ export const ContactSection = () => {
 					{/* LEFT: Branding */}
 					<div className="space-y-6">
 						<p className="display-cap text-blue-900">Communication Gateway</p>
-						<h2 className="h1 text-slate-900 leading-tight">
-							Initiate a Strategic Partnership.
-						</h2>
+						<h2 className="h1 text-slate-900 leading-tight">{label}</h2>
 						<p className="text-slate-500 max-w-md font-light leading-relaxed">
-							Currently open for Management Trainee roles, Financial Analyst
-							positions, and Strategic Consultations.
+							{description}
 						</p>
 
 						{/* Dynamic Availability Status */}
